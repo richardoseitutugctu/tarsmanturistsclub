@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Tarsman Tourists club</title>
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+        /* main section */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+            .video {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            font-weight: 700;
+             color: red;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .content p {
+            font-size: 2rem;
+            font-weight: 200;
+            text-shadow: 1px 1px 2px rgba(0.5, 0.5, 0.5, 0.5);
+            color: black;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: blueviolet;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #fff;
+            color: blueviolet;
+
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <a class="brand" href="index.html"><img src="IMAGE/tarsman tourism logo.png" alt="logo">Tarsman Tourists club</a>
+
+            <div class="search">
+                <input type="text" placeholder="search items....">
+                <button type="submit">Search</button>
+            </div>
+
+            <ul class="ul">
+                <li><a class="links active" href="index.html">Home</a></li>
+                <li><a class="links" href="destinations.htm">Destinations</a></li>
+                <li><a class="links" href="activities.html">Activities</a></li>
+                <li><a class="links" href="about.html">About</a></li>
+                <li><a class="links" href="contact.html">Contact</a></li>
+                <li><a class="links" href="account.html">Account</a></li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <video autoplay muted loop poster="IMAGE/download (8).jpg" class="video">
+                <source src="#" type="video/mp4">
+            </video>
+
+            <div class="content">
+                <h1>Welcome to Ghana</h1>
+                <p>Discover breathtaking destinations and vibrant culture</p>
+                <a href="destinations.htm" class="btn">Explore Destinations</a>
+            </div>
+        </section>
+
+        <section style="margin-top: 3rem;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Featured Destinations</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="IMAGE/kakum national park.jpg" alt="Kakum National Park">
+                    <h3>Kakum National Park</h3>
+                    <p>Walk on the famous 40-meter high canopy walkway. Experience rainforest magic and incredible wildlife viewing opportunities.</p>
+                    <a href="destinations.htm" class="btn">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <img src="IMAGE/mole park 4.jpg" alt="Mole National Park">
+                    <h3>Mole National Park</h3>
+                    <p>Ghana's largest wildlife reserve. Spot elephants, antelopes, and exotic birds in their natural setting on thrilling safari adventures.</p>
+                    <a href="destinations.htm" class="btn">Learn More</a>
+                </div>
+
+                <div class="card">
+                    <img src="IMAGE/cape coast castle.jpg" alt="Cape Coast Castle">
+                    <h3>Cape Coast Castle</h3>
+                    <p>Iconic 17th-century fortress with rich history. Explore colonial architecture and museum exhibits overlooking the Atlantic Ocean.</p>
+                    <a href="destinations.htm" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: 3rem; background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); padding: 2rem; border-radius: 12px;">
+            <h2 style="text-align: center; color: #4b2fbf; margin-bottom: 1.5rem;">Why Visit Ghana?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">🏞️ Natural Beauty</h3>
+                    <p>Pristine parks, waterfalls, and diverse ecosystems waiting to be discovered.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">🏰 Rich History</h3>
+                    <p>Historic castles and cultural sites tell stories of Ghana's fascinating past.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">🎭 Vibrant Culture</h3>
+                    <p>Experience authentic traditions, festivals, and warm Ghanaian hospitality.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">🌍 Adventure</h3>
+                    <p>From wildlife safaris to hiking, exciting activities for every traveler.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">💰 Value</h3>
+                    <p>Exceptional experiences at affordable prices with world-class service.</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="color: #4b2fbf;">🤝 Community</h3>
+                    <p>Direct connections with local guides and communities for authentic experiences.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/nav.js"></script>
+</body>
+</html>

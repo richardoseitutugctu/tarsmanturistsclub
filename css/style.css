@@ -1,0 +1,53 @@
+/* Professional responsive navbar styles */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:#222}
+
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 0;background:#fff;position:relative;border-bottom:1px solid rgba(0,0,0,0.06)}
+.nav.container{padding-left:0;padding-right:0}
+.nav .brand{display:flex;align-items:center;gap:.75rem;font-weight:800;color:#4b2fbf}
+.brand img{height:48px;width:auto;display:block}
+.brand small{display:block;font-size:.75rem;color:#666}
+
+.search{display:flex;align-items:center;background:#f5f5ff;padding:.25rem;border-radius:999px;border:1px solid #efefef}
+.search input{border:0;background:transparent;padding:.45rem .6rem;min-width:160px}
+.search button{background:#4b2fbf;color:#fff;border:0;padding:.45rem .7rem;border-radius:999px;cursor:pointer}
+
+.ul{display:flex;gap:1rem;align-items:center;list-style:none;transition:all .28s ease;}
+.links{color:#333;padding:.35rem .6rem;border-radius:.4rem;font-weight:600;transition:all .18s ease}
+.links:hover{background:#4b2fbf;color:#fff}
+.links.active{color:#4b2fbf;border-bottom:2px solid #4b2fbf}
+
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:#f5f5ff;border-radius:8px;border:1px solid #efefef;transition:all .2s ease}
+.hamburger:hover{background:#e8e8f5;transform:scale(1.05)}
+.hamburger span{height:3px;width:22px;background:#333;border-radius:2px;display:block;transition:all .3s ease}
+
+/* Mobile menu (hidden by default). JS toggles the .open class on .ul */
+.ul.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:#fff;padding:1rem;border-bottom-left-radius:8px;border-bottom-right-radius:8px;box-shadow:0 6px 18px rgba(29,31,35,.08);z-index:1000}
+.ul.open .links{padding:.65rem 1rem;display:block;width:100%}
+
+/* Sticky shadow when scrolling (optional utility) */
+.nav.sticky{box-shadow:0 6px 18px rgba(29,31,35,.06)}
+
+/* Responsive adjustments */
+@media (max-width:900px){
+  .search input{min-width:110px}
+}
+
+@media (max-width:768px){
+  .search{display:none}
+  .ul{display:none}
+  .ul.open{display:flex}
+  .hamburger{display:flex}
+  .brand img{height:40px}
+}
+
+@media (max-width:420px){
+  .brand{font-size:.95rem}
+}
+
+/* Hero and content utilities */
+.hero{min-height:60vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+.content h1{font-size:2.5rem;color:#c11;margin-bottom:.5rem}
+.content p{font-size:1.05rem;color:#111}

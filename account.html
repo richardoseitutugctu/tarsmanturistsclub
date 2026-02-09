@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | Tarsman Tourists club</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    a {
+      text-decoration: none;
+    }
+
+    body {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .login-container {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 420px;
+      padding: 2.5rem;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .login-header h1 {
+      color: #4b2fbf;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .login-header p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #4b2fbf;
+      box-shadow: 0 0 0 3px rgba(75, 47, 191, 0.1);
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .form-actions a {
+      color: #4b2fbf;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .form-actions a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      cursor: pointer;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 0.85rem;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-login:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-login:active {
+      transform: translateY(0);
+    }
+
+    .divider {
+      margin: 2rem 0;
+      position: relative;
+      text-align: center;
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 45%;
+      height: 1px;
+      background: #ddd;
+    }
+
+    .divider::before {
+      left: 0;
+    }
+
+    .divider::after {
+      right: 0;
+    }
+
+    .signup-link {
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .signup-link a {
+      color: #4b2fbf;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .signup-link a:hover {
+      color: #764ba2;
+    }
+
+    .error-message {
+      background: #fee;
+      color: #c33;
+      padding: 0.75rem;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      display: none;
+    }
+
+    .error-message.show {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        padding: 2rem;
+        margin: 0 1rem;
+      }
+
+      .login-header h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .login-container {
+        padding: 1.5rem;
+        border-radius: 8px;
+      }
+
+      .login-header h1 {
+        font-size: 1.3rem;
+      }
+
+      .btn-login {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav container">
+      <a class="brand" href="index.html"><img src="IMAGE/tarsman tourism logo.png" alt="logo">Tarsman Tourists club</a>
+
+      <div class="search">
+        <input type="text" placeholder="search items....">
+        <button type="submit">Search</button>
+      </div>
+
+      <ul class="ul">
+        <li><a class="links" href="index.html">Home</a></li>
+        <li><a class="links" href="destinations.htm">Destinations</a></li>
+        <li><a class="links" href="activities.html">Activities</a></li>
+        <li><a class="links" href="about.html">About</a></li>
+        <li><a class="links" href="contact.html">Contact</a></li>
+        <li><a class="links active" href="account.html">Account</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <div class="login-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to your Tarsman Tourists account</p>
+      </div>
+
+      <div class="error-message" id="errorMsg"></div>
+
+      <form id="loginForm" action="index.html" method="get">
+        <div class="form-group">
+          <label for="email">Email or Username</label>
+          <input type="text" id="email" name="email" placeholder="Enter your email or username" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="form-actions">
+          <div class="checkbox-group">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember" style="margin-bottom: 0;">Remember me</label>
+          </div>
+          <a href="#forgot">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-login">Sign In</button>
+      </form>
+
+      <div class="divider">or</div>
+
+      <div class="signup-link">
+        Don't have an account? <a href="#signup">Create one now</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/nav.js"></script>
+  <script>
+    // Handle login form submission
+    const loginForm = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      // Simple validation
+      if (!email || !password) {
+        showError('Please fill in all fields');
+        return;
+      }
+
+      if (password.length < 6) {
+        showError('Password must be at least 6 characters');
+        return;
+      }
+
+      // Simulate login (in real app, send to server)
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('isLoggedIn', 'true');
+
+      alert('Login successful! Welcome ' + email);
+      loginForm.reset();
+      errorMsg.classList.remove('show');
+
+      // Optionally redirect after small delay
+      // setTimeout(() => window.location.href = 'index.html', 1000);
+    });
+
+    function showError(message) {
+      errorMsg.textContent = message;
+      errorMsg.classList.add('show');
+      setTimeout(() => errorMsg.classList.remove('show'), 4000);
+    }
+  </script>
+</body>
+</html>
