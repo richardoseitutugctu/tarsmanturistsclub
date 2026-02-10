@@ -9,9 +9,9 @@
 
 ### Student Information
 
-#### Name: 
+#### Name: Richard Osei Tutu
 
-#### Student ID:
+#### Student ID: 2425401790
 
 #### Lecturer: Dr. Ebenezer Akaglo
 
