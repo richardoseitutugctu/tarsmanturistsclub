@@ -5,7 +5,7 @@
 
 ### You can view the completed website by clicking the link below: 
 
-##### https://richardoseitutugctu.github.io/tarsmanturistsclub/index.html
+##### https://richardoseitutugctu.github.io/tarsmanturistsclub/
 
 ### Student Information
 
